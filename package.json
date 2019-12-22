@@ -1,0 +1,59 @@
+{
+  "name": "jrfws2",
+  "version": "1.0.0",
+  "description": "async/await package for create api realtime on websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "roots": [
+      "./tests"
+    ],
+    "collectCoverage": true
+  },
+  "keywords": [
+    "api",
+    "asyc/await",
+    "realtime",
+    "ws",
+    "websockets",
+    "websocket",
+    "jrfws",
+    "jrfws2",
+    "server",
+    "client",
+    "webclient",
+    "route",
+    "routing",
+    "jrf"
+  ],
+  "author": {
+    "name": "jirufik",
+    "url": "https://github.com/jirufik"
+  },
+  "maintainers": [
+    {
+      "name": "jirufik",
+      "url": "https://github.com/jirufik"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "ws": "^7.1.2",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "jest": "^24.9.0",
+    "jrf-path-exists": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jirufik/jrfws2"
+  }
+}
