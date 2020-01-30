@@ -79,7 +79,7 @@ await jrfwsClient.startClient({url: `ws://localhost:${PORT}`, browserClient: tru
 
 **hook** - `this.onMessage = async (args) => {};` executes when a message arrives from the server.
 
-### Routing
+## Routing
 
 To process incoming messages, you need to configure routing.
 
@@ -578,7 +578,7 @@ Parameters `mes, group, user, clients, mesSendServer`.
 
 ## User
 
-** User ** is a user object that identifies the server and client connection.
+**User** is a user object that identifies the server and client connection.
 One user can have several client connections at the same time.
 For example, connections from different devices.
  

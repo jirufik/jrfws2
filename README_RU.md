@@ -77,7 +77,7 @@ await jrfwsClient.startClient({url: `ws://localhost:${PORT}`, browserClient: tru
 
 **hook** - `this.onMessage = async (args) => {};` отрабатывает при поступлении сообщнеия с сервера. 
 
-### Routing
+## Routing
 
 Для обработки входящих сообщение нужно настроить маршрутизацию. 
 
