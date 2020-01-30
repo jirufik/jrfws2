@@ -11,6 +11,7 @@ module.exports = class {
     this._groups = {};
     this.groups = {};
     this.url = null;
+    this.cycleAwaitTimeout = 15;
     this.user = {
       username: '',
       email: '',
@@ -1291,7 +1292,7 @@ module.exports = class {
 
     while (true) {
 
-      await this._wait(100);
+      await this._wait(this.cycleAwaitTimeout);
 
       const timeDiff = new Date() - timeStart;
       if (timeDiff >= timeout) {
