@@ -57,7 +57,7 @@ app.listen(3001);
 
 ## Client
 
-To establish a connection, you must specify the address `url` and where the client `browserClient: true` starts.
+To establish a connection, you must specify the address `url`.
 You can specify the parameter `reconnect` - `true` try to reconnect to the server, after a break,
 `false` - do not restore the connection.
 
@@ -66,9 +66,9 @@ const {JRFWSClient} = require('jrfws2');
 const jrfwsClient = new JRFWSClient();
 await jrfwsClient.startClient({url: `ws://localhost:${PORT}`});
 
-import {JRFWSClient} from 'jrfws2';
-const jrfwsClient = new JRFWSClient();
-await jrfwsClient.startClient({url: `ws://localhost:${PORT}`, browserClient: true});
+import {JRFWSBrowserClient} from 'jrfws2';
+const jrfwsClient = new JRFWSBrowserClient();
+await jrfwsClient.startClient({url: `ws://localhost:${PORT}`});
 ```
 
 **hook** - `this.onOpen = async (args) => {};` fulfills when connecting to the server.

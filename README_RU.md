@@ -55,7 +55,7 @@ app.listen(3001);
 
 ## Client
 
-Для установки соединения необходимо указать адрес `url` и где запускается клиент `browserClient: true`.
+Для установки соединения необходимо указать адрес `url`.
 Можно указать параметр `reconnect` - `true` пытаться восстановить соединение с сервером, после разрыва,
 `false` - не восстанавливать соединение.
 
@@ -64,9 +64,9 @@ const {JRFWSClient} = require('jrfws2');
 const jrfwsClient = new JRFWSClient();
 await jrfwsClient.startClient({url: `ws://localhost:${PORT}`});
 
-import {JRFWSClient} from 'jrfws2';
-const jrfwsClient = new JRFWSClient();
-await jrfwsClient.startClient({url: `ws://localhost:${PORT}`, browserClient: true});
+import {JRFWSBrowserClient} from 'jrfws2';
+const jrfwsClient = new JRFWSBrowserClient();
+await jrfwsClient.startClient({url: `ws://localhost:${PORT}`});
 ```
 
 **hook** - `this.onOpen = async (args) => {};` отрабатывает при соединение с сервером.

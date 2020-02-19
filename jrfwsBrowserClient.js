@@ -63,7 +63,6 @@ module.exports = class {
       this.reconnect = reconnect;
     }
 
-    const WebSocket = require('ws');
     this.wsClient = new WebSocket(this.url);
 
     this.wsClient.onopen = async (args) => {
