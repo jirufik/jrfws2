@@ -1,6 +1,6 @@
 {
   "name": "jrfws2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "async/await package for create api realtime on websockets",
   "main": "index.js",
   "scripts": {
