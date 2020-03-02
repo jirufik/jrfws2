@@ -634,6 +634,9 @@ module.exports = class {
 
     if (this.wsClient) {
 
+      const isWait = this.wsClient.readyState === 0 || this.wsClient.readyState === 3 || this.wsClient.readyState === 2;
+      if (isWait) await this._wait(150);
+
       const res = await this._sendMesClient({client, data, route, act, awaitRes, callback, options, to, from, system});
       if (awaitRes) {
         return res;
