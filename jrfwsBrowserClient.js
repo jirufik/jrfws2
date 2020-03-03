@@ -322,8 +322,17 @@ module.exports = class {
 
   async sendMes({data, route = null, act = null, awaitRes = null, callback = null, options = null, to = null, from = null, system = {}}) {
 
-    const isWait = !this.wsClient || this.wsClient.readyState === 0 || this.wsClient.readyState === 3 || this.wsClient.readyState === 2;
-    if (isWait) await this._wait(150);
+    for (let i = 0; i < 11; i++) {
+
+      const isWait = !this.wsClient || this.wsClient.readyState === 0 || this.wsClient.readyState === 3 || this.wsClient.readyState === 2;
+
+      if (isWait) {
+        await this._wait(150);
+      } else {
+        break;
+      }
+
+    }
 
     if (this.wsClient) {
 
