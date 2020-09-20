@@ -1,5 +1,7 @@
 # jrfws2
 
+#### Deprecated. New version [jrf-ws-3](https://github.com/jirufik/jrf-ws)
+
 **jrfws2**  - это **async/await** пакет для создания **api** реального времени, на основе **websockets**. Является оберткой над легким и быстрым [ws](https://www.npmjs.com/package/ws). Может работать самостоятельно или в связке с [koa](https://www.npmjs.com/package/koa).
 
 ![jrfwslogo](jrfwslogo.png)
